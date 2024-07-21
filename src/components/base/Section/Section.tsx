@@ -1,13 +1,13 @@
-import { Element } from 'react-scroll';
+// import { Element } from 'react-scroll';
 
 interface ISectionProps {
-  id?: string;
+  id: string;
   children: React.ReactNode;
 }
 
 const Section: React.FC<ISectionProps> = ({ id, children }) => {
   return (
-    <section>
+    <section className={`${id}-bg`}>
       <div id={id} className="container">
         {/* <Element name={name} className="element"> */}
         {children}

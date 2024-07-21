@@ -16,8 +16,8 @@ const Navigation: React.FC = () => {
           href="#"
           spy={true}
           smooth={true}
-          offset={50}
-          duration={500}
+          offset={0}
+          duration={1000}
           ignoreCancelEvents={true}
           //   onSetActive={handleSetActive}
         >

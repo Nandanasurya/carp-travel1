@@ -3,7 +3,7 @@ import Navigation from '@/components/ui-kit/Navigation/Navigation';
 
 const Header: React.FC = () => {
   return (
-    <header>
+    <header className="absolute">
       <Logo />
       <Navigation />
     </header>

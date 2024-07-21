@@ -1,5 +1,11 @@
+import Section from '@/components/base/Section/Section';
+
 const Services: React.FC = () => {
-  return <div>Services</div>;
+  return (
+    <Section id="services">
+      <div>Services</div>
+    </Section>
+  );
 };
 
 export default Services;
