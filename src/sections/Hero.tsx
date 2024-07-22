@@ -1,6 +1,9 @@
+'use client';
+
 import Description from '@/components/base/Description/Description';
 import Section from '@/components/base/Section/Section';
 import data from '@/data/hero.json';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
   const {
@@ -12,6 +15,7 @@ const Hero = () => {
     locations,
     description,
     button,
+    to,
   } = data;
 
   return (
@@ -33,12 +37,18 @@ const Hero = () => {
           {locations}
         </p>
         <Description text={description} className="text-justify" />
-        <button
-          type="button"
-          className="px-16 py-[18px] bg-heroBtn hover:bg-heroBtnHover focus:bg-heroBtnHover focus:outline-white"
+        <Link
+          to={to}
+          href="#"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          ignoreCancelEvents={true}
+          className="text-center px-16 py-[18px] bg-heroBtn hover:bg-heroBtnHover focus:bg-heroBtnHover focus:outline-white"
         >
           {button}
-        </button>
+        </Link>
       </div>
     </Section>
   );
