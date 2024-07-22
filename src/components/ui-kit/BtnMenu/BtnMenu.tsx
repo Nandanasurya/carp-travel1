@@ -4,7 +4,7 @@ interface IBtnMenuProps {
   className?: string;
 }
 
-const BtnMenu: React.FC<IBtnMenuProps> = ({ onClick, text, className }) => {
+const BtnMenu = ({ onClick, text, className }: IBtnMenuProps) => {
   return (
     <button
       type="button"

@@ -7,7 +7,7 @@ interface IMenuProps {
   showMenu: boolean;
 }
 
-const Menu: React.FC<IMenuProps> = ({ onClose, showMenu }) => {
+const Menu = ({ onClose, showMenu }: IMenuProps) => {
   return (
     <Modal onClose={onClose} showMenu={showMenu}>
       <BtnMenu text="close" onClick={onClose} className="flex ml-auto" />

@@ -7,7 +7,7 @@ import Menu from '@/components/ui-kit/Menu/Menu';
 import Navigation from '@/components/ui-kit/Navigation/Navigation';
 import { useMediaQuery } from 'react-responsive';
 
-const Header: React.FC = () => {
+const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 767 });

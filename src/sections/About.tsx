@@ -1,6 +1,6 @@
 import Section from '@/components/base/Section/Section';
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <Section id="about">
       <div>About</div>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import data from '@/data/common.json';
 
-const Logo: React.FC = () => {
+const Logo = () => {
   const { src, alt } = data.logo;
 
   return (

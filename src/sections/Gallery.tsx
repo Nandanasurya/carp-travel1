@@ -1,6 +1,6 @@
 import Section from '@/components/base/Section/Section';
 
-const Gallery: React.FC = () => {
+const Gallery = () => {
   return (
     <Section id="gallery">
       <div>Gallery</div>

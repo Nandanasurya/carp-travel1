@@ -6,7 +6,7 @@ interface IModalProps {
   showMenu: boolean;
 }
 
-const Modal: React.FC<IModalProps> = ({ children, onClose, showMenu }) => {
+const Modal = ({ children, onClose, showMenu }: IModalProps) => {
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {

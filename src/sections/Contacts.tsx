@@ -1,6 +1,6 @@
 import Section from '@/components/base/Section/Section';
 
-const Contacts: React.FC = () => {
+const Contacts = () => {
   return (
     <Section id="contacts">
       <div>Contacts</div>

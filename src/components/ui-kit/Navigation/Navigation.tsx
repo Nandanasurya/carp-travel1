@@ -5,7 +5,7 @@ interface INavigationProps {
   onClick?: () => void;
 }
 
-const Navigation: React.FC<INavigationProps> = ({ onClick }) => {
+const Navigation = ({ onClick }: INavigationProps) => {
   const { navigation } = data;
 
   return (
