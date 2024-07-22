@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import { Link } from 'react-scroll';
 import data from '@/data/common.json';
 
