@@ -1,27 +1,31 @@
-'use client';
-
+import clsx from 'clsx';
 import { Link } from 'react-scroll';
 import data from '@/data/common.json';
 
-const Navigation: React.FC = () => {
+interface INavigationProps {
+  onClick?: () => void;
+}
+
+const Navigation: React.FC<INavigationProps> = ({ onClick }) => {
   const { navigation } = data;
 
   return (
-    <nav>
-      {navigation.map((nav) => (
+    <nav className="flex flex-col gap-12 my-auto items-center md:flex-row md:gap-14">
+      {navigation.map(({ to, title }) => (
         <Link
-          key={nav.to}
+          key={to}
           activeClass="active"
-          to={nav.to}
+          to={to}
           href="#"
           spy={true}
           smooth={true}
           offset={0}
           duration={1000}
           ignoreCancelEvents={true}
-          //   onSetActive={handleSetActive}
+          onClick={onClick}
+          className="flex text-lg tracking-[1.8px] font-normal md:text-sm md:tracking-[1.4px] hover:underline focus:underline focus:outline-white"
         >
-          {nav.title}
+          {title}
         </Link>
       ))}
     </nav>
