@@ -5,7 +5,7 @@ interface INavigationProps {
   onClick?: () => void;
 }
 
-const Navigation = ({ onClick }: INavigationProps) => {
+function Navigation({ onClick }: INavigationProps) {
   const { navigation } = data;
 
   return (
@@ -29,6 +29,6 @@ const Navigation = ({ onClick }: INavigationProps) => {
       ))}
     </nav>
   );
-};
+}
 
 export default Navigation;
