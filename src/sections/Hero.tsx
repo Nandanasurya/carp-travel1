@@ -20,7 +20,7 @@ const Hero = () => {
 
   return (
     <Section id="hero">
-      <div className="flex flex-col gap-6 pt-[51px]">
+      <div className="flex flex-col gap-6 pt-[49px]">
         <div className="ml-auto">
           <h2 className="text-[37px] font-medium leading-none">
             {subTitle1}&#32;
