@@ -45,7 +45,7 @@ const Hero = () => {
           offset={0}
           duration={1000}
           ignoreCancelEvents={true}
-          className="text-center px-16 py-[18px] bg-heroBtn hover:bg-heroBtnHover focus:bg-heroBtnHover focus:outline-white"
+          className="flex justify-center items-center h-[53px] bg-heroBtn hover:bg-heroBtnHover focus:bg-heroBtnHover focus:outline-white btn-hero relative"
         >
           {button}
         </Link>
