@@ -16,9 +16,9 @@ const Header = () => {
     setIsMounted(true);
   }, []);
 
-  const toggleMenu = () => {
+  function toggleMenu() {
     setShowMenu(!showMenu);
-  };
+  }
 
   if (!isMounted) {
     return null;
