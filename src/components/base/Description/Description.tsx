@@ -7,8 +7,7 @@ interface IDescriptionProps {
 const Description = ({ text, bold, className }: IDescriptionProps) => {
   return (
     <p className={`text-sm font-extralight leading-5 ${className}`}>
-      <span className="font-normal">{bold}</span>
-      {text}
+      <span className="font-normal">{bold}</span>&#32;{text}
     </p>
   );
 };

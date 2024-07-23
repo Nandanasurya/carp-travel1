@@ -34,6 +34,7 @@ body {
   max-width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 54px;
   padding-bottom: 56px;
   margin-left: auto;
   margin-right: auto;
@@ -82,7 +83,7 @@ body {
 
 .about-bg {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-image: url('/images/bg/about/about-bg-mobile@1x.webp');
   background-size: cover;
   background-position: center;
