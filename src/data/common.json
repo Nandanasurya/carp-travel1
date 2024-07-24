@@ -21,5 +21,6 @@
       "to": "contacts",
       "title": "Contacts"
     }
-  ]
+  ],
+  "formButton": "SEND"
 }

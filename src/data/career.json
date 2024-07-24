@@ -22,5 +22,53 @@
       "title": "Exciting challenges",
       "text": "Unleash your potential through unforgettable projects showcasing Carpathian beauty."
     }
+  ],
+  "description2": {
+    "text": "Don't miss your opportunity! \nFill out the form right now and join our team!"
+  },
+  "formFields": [
+    {
+      "label": "Full name",
+      "type": "text",
+      "id": "username",
+      "name": "username",
+      "placeholder": "John Smith",
+      "autoComplete": "given-name"
+    },
+    {
+      "label": "E-mail",
+      "type": "email",
+      "id": "email",
+      "name": "email",
+      "placeholder": "johnsmith@email.com",
+      "autoComplete": "email"
+    },
+    {
+      "label": "Position",
+      "type": "text",
+      "id": "position",
+      "name": "position",
+      "placeholder": "Movie maker"
+    },
+    {
+      "label": "Phone",
+      "type": "tel",
+      "id": "phone",
+      "name": "phone",
+      "placeholder": "(097) 12 34 567",
+      "autoComplete": "tel"
+    },
+    {
+      "label": "Message",
+      "type": "textarea",
+      "id": "message",
+      "name": "message"
+    },
+    {
+      "label": "I confirm my consent to the processing of personal data.",
+      "type": "checkbox",
+      "id": "checked",
+      "name": "checked"
+    }
   ]
 }

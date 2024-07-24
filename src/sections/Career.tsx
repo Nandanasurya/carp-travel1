@@ -7,6 +7,7 @@ import Title from '@/components/base/Title/Title';
 import data from '@/data/career.json';
 import Description from '@/components/base/Description/Description';
 import Advantages from '@/components/ui-kit/Advantages/Advantages';
+import CareerForm from '@/components/ui-kit/CareerForm/CareerForm';
 
 const Career = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -35,7 +36,7 @@ const Career = () => {
 
       {isMobile && (
         <Section id="career">
-          <div>Career</div>
+          <CareerForm />
         </Section>
       )}
     </>
