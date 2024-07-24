@@ -1,3 +1,5 @@
+'use client';
+
 import Description from '@/components/base/Description/Description';
 import FormButton from '@/components/base/FormButton/FormButton';
 import FormField, {
@@ -48,7 +50,6 @@ const CareerForm = () => {
             name={field.name as Name}
             errors={errors}
             register={register}
-            // required={field.required}
             placeholder={field.placeholder}
             autoComplete={field.autoComplete}
             inputRef={field.type === 'tel' ? inputRef : null}
