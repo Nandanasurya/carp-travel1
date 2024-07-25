@@ -1,4 +1,5 @@
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
+import InputMask from 'react-input-mask';
 
 interface IFormFieldProps {
   id?: string;
@@ -82,19 +83,35 @@ const FormField = ({
           >
             {label}
           </label>
-          <input
-            type={type}
-            id={name}
-            {...register(name)}
-            placeholder={placeholder}
-            autoComplete={autoComplete}
-            className={`bg-inputBg ${type === 'tel' ? 'pl-10' : 'pl-2'} text-[13px] font-extralight leading-6 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 placeholder:opacity-20 hover:bg-heroBtn focus:bg-heroBtn focus:outline-white ${errors[name] ? 'text-red' : 'text-white'}`}
-          />
-          {type === 'tel' && (
-            <span className="absolute left-2 top-[53%] transform -translate-y-1/2 text-[13px] font-extralight leading-6">
-              +38
-            </span>
+          {type === 'tel' ? (
+            <>
+              <InputMask
+                mask={'(999) 99 99 999'}
+                alwaysShowMask={false}
+                type={type}
+                id={name}
+                {...register(name)}
+                placeholder={placeholder}
+                autoComplete={autoComplete}
+                className={`bg-inputBg ${type === 'tel' ? 'pl-10' : 'pl-2'} text-[13px] font-extralight leading-6 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 placeholder:opacity-20 hover:bg-heroBtn focus:bg-heroBtn focus:outline-white ${errors[name] ? 'text-red' : 'text-white'}`}
+              />
+              {type === 'tel' && (
+                <span className="absolute left-2 top-[53%] transform -translate-y-1/2 text-[13px] font-extralight leading-6">
+                  +38
+                </span>
+              )}
+            </>
+          ) : (
+            <input
+              type={type}
+              id={name}
+              {...register(name)}
+              placeholder={placeholder}
+              autoComplete={autoComplete}
+              className={`bg-inputBg ${type === 'tel' ? 'pl-10' : 'pl-2'} text-[13px] font-extralight leading-6 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 placeholder:opacity-20 hover:bg-heroBtn focus:bg-heroBtn focus:outline-white ${errors[name] ? 'text-red' : 'text-white'}`}
+            />
           )}
+
           <p
             className={`text-xs text-red font-extralight leading-6 tracking-[2.4px] absolute bottom-0 right-0 ${errors[name] ? 'errors' : ''}`}
           >

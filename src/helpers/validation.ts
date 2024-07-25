@@ -3,7 +3,7 @@ import * as yup from 'yup';
 const usernameRegexp =
   /^(?:\s*[a-zA-Z'-]{1,32}(?:\s+[a-zA-Z'-]{1,32})?|\s*[a-zA-Z'-]{1,64})\s*$/;
 const emailRegexp = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-const phoneRegexp = /^0\d{2}\d{2}\d{2}\d{3}$/;
+const phoneRegexp = /^\(0\d{2}\) \d{2} \d{2} \d{3}$/;
 
 export const schema = yup.object().shape({
   username: yup
