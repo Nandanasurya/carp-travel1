@@ -1,9 +1,8 @@
 // 'use client';
 
 import Section from '@/components/base/Section/Section';
-import Slider from '@/components/base/Slider/Slider';
+import GallerySlider from '@/components/ui-kit/GallerySlider/GallerySlider';
 import Title from '@/components/base/Title/Title';
-import GalleryCard from '@/components/ui-kit/GalleryCard/GalleryCard';
 import data from '@/data/gallery.json';
 
 const Gallery = () => {
@@ -12,7 +11,7 @@ const Gallery = () => {
   return (
     <Section id="gallery">
       <Title title1={title1} title2={title2} />
-      <Slider />
+      <GallerySlider />
     </Section>
   );
 };

@@ -8,11 +8,7 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import data from '@/data/gallery.json';
 
-interface ISliderProps {
-  //   children: React.ReactNode;
-}
-
-const Slider = () => {
+const GallerySlider = () => {
   const refSlider = useRef(null);
   const { slides } = data;
 
@@ -36,24 +32,21 @@ const Slider = () => {
       loop={true}
       style={{ height: '100vh' }}
     >
-      <>
-        {slides.map((item, index) => (
-          <>
-            <SwiperSlide key={index}>
-              <Image
-                src={`/images/slides/gallery/gallery-0${item.path}-mobile@1x.webp`}
-                alt={item.alt}
-                width={606}
-                height={429}
-                priority
-                className="w-full h-full"
-              />
-            </SwiperSlide>
-          </>
-        ))}
-      </>
+      {slides.map((item, index) => (
+        <SwiperSlide key={index}>
+          <Image
+            src={`/images/slides/gallery/gallery-${item.path}@1x.webp`}
+            alt={item.alt}
+            width={606}
+            height={429}
+            priority
+            className="w-full h-full"
+            sizes="(min-width: 768px) 415px, (min-width: 1280px) 607px"
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
 
-export default Slider;
+export default GallerySlider;

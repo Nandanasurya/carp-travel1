@@ -3,16 +3,16 @@
   "title2": "GALLERY",
   "slides": [
     {
-      "path": "1",
+      "path": "01",
       "alt": "mountains"
     },
-    { "path": "2", "alt": "lake" },
-    { "path": "3", "alt": "forest" },
+    { "path": "02", "alt": "lake" },
+    { "path": "03", "alt": "forest" },
     {
-      "path": "1",
+      "path": "01",
       "alt": "mountains"
     },
-    { "path": "2", "alt": "lake" },
-    { "path": "3", "alt": "forest" }
+    { "path": "02", "alt": "lake" },
+    { "path": "03", "alt": "forest" }
   ]
 }
