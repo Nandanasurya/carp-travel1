@@ -10,7 +10,6 @@ interface IFormFieldProps {
   placeholder?: string;
   component?: React.ReactNode;
   autoComplete?: string;
-  inputRef?: React.Ref<HTMLInputElement>;
 }
 
 export type Name =
@@ -39,10 +38,7 @@ const FormField = ({
   placeholder,
   autoComplete,
   id,
-  inputRef,
 }: IFormFieldProps) => {
-  const { ref, ...rest } = register(name);
-
   return (
     <>
       {type === 'checkbox' ? (
@@ -89,8 +85,7 @@ const FormField = ({
           <input
             type={type}
             id={name}
-            {...rest}
-            ref={type === 'tel' ? inputRef || ref : ref}
+            {...register(name)}
             placeholder={placeholder}
             autoComplete={autoComplete}
             className={`bg-inputBg ${type === 'tel' ? 'pl-10' : 'pl-2'} text-[13px] font-extralight leading-6 placeholder:text-[13px] placeholder:font-extralight placeholder:leading-6 placeholder:opacity-20 hover:bg-heroBtn focus:bg-heroBtn focus:outline-white ${errors[name] ? 'text-red' : 'text-white'}`}

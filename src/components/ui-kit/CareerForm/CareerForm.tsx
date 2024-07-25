@@ -9,7 +9,7 @@ import FormField, {
 import data from '@/data/career.json';
 import schema from '@/helpers/validation';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useMask } from '@react-input/mask';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 const CareerForm = () => {
@@ -17,6 +17,8 @@ const CareerForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
+    setValue,
     reset,
   } = useForm<FormData>({
     mode: 'all',
@@ -24,13 +26,25 @@ const CareerForm = () => {
   });
   const { description2, formFields } = data;
 
-  const inputRef = useMask({
-    mask: '(___) __ __ ___',
-    replacement: { _: /\d/ },
+  watch((data) => {
+    localStorage.setItem('careerForm', JSON.stringify(data));
   });
+
+  useEffect(() => {
+    const storageData = localStorage.getItem('careerForm');
+    if (storageData !== null) {
+      const result = JSON.parse(storageData);
+      setValue('username', result.username);
+      setValue('email', result.email);
+      setValue('position', result.position);
+      setValue('phone', result.phone);
+      setValue('message', result.message);
+    }
+  }, [setValue]);
 
   const onSubmit = (data: FormData) => {
     console.log(data);
+    localStorage.removeItem('careerForm');
     reset();
   };
 
@@ -52,7 +66,6 @@ const CareerForm = () => {
             register={register}
             placeholder={field.placeholder}
             autoComplete={field.autoComplete}
-            inputRef={field.type === 'tel' ? inputRef : null}
           />
         ))}
         <FormButton />
