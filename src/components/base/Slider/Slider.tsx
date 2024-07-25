@@ -36,7 +36,7 @@ const Slider = () => {
       loop={true}
       style={{ height: '100vh' }}
     >
-      <ul>
+      <>
         {slides.map((item, index) => (
           <>
             <SwiperSlide key={index}>
@@ -51,7 +51,7 @@ const Slider = () => {
             </SwiperSlide>
           </>
         ))}
-      </ul>
+      </>
     </Swiper>
   );
 };

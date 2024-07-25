@@ -7,6 +7,12 @@
       "alt": "mountains"
     },
     { "path": "2", "alt": "lake" },
+    { "path": "3", "alt": "forest" },
+    {
+      "path": "1",
+      "alt": "mountains"
+    },
+    { "path": "2", "alt": "lake" },
     { "path": "3", "alt": "forest" }
   ]
 }
