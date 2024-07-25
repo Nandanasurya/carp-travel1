@@ -20,7 +20,7 @@ const ContactForm = () => {
     setValue,
     reset,
   } = useForm<FormData>({
-    mode: 'all',
+    mode: 'onTouched',
     resolver: yupResolver(schema),
   });
   const { formFields } = data;

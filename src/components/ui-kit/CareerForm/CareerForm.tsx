@@ -21,7 +21,7 @@ const CareerForm = () => {
     setValue,
     reset,
   } = useForm<FormData>({
-    mode: 'all',
+    mode: 'onTouched',
     resolver: yupResolver(schema),
   });
   const { description2, formFields } = data;
