@@ -30,7 +30,7 @@ const GallerySlider = () => {
         clickable: true,
       }}
       loop={true}
-      style={{ height: '100vh' }}
+      className="mt-6 h-screen"
     >
       {slides.map((item, index) => (
         <SwiperSlide key={index}>
@@ -41,7 +41,7 @@ const GallerySlider = () => {
             height={429}
             priority
             className="w-full h-full"
-            sizes="(min-width: 768px) 415px, (min-width: 1280px) 607px"
+            sizes="(max-width: 767px) 100vw, (min-width: 768px) 415px, (min-width: 1280px) 607px"
           />
         </SwiperSlide>
       ))}
