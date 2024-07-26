@@ -6,15 +6,12 @@ import Logo from '@/components/ui-kit/Logo/Logo';
 import Menu from '@/components/ui-kit/Menu/Menu';
 import Navigation from '@/components/ui-kit/Navigation/Navigation';
 import { useMediaQuery } from 'react-responsive';
+import useIsMounted from '@/hooks/useIsMounted';
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  const isMounted = useIsMounted();
   const isMobile = useMediaQuery({ maxWidth: 767 });
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);

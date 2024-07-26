@@ -8,16 +8,13 @@ import data from '@/data/career.json';
 import Description from '@/components/base/Description/Description';
 import Advantages from '@/components/ui-kit/Advantages/Advantages';
 import CareerForm from '@/components/ui-kit/CareerForm/CareerForm';
+import useIsMounted from '@/hooks/useIsMounted';
 
 const Career = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const isMounted = useIsMounted();
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   const { title1, title2, description1 } = data;
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   if (!isMounted) {
     return null;
