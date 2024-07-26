@@ -14,5 +14,9 @@
     },
     { "path": "02", "alt": "lake" },
     { "path": "03", "alt": "forest" }
-  ]
+  ],
+  "button": {
+    "back": "Back",
+    "next": "Next"
+  }
 }

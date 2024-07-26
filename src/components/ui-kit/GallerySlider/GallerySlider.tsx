@@ -12,12 +12,13 @@ import data from '@/data/gallery.json';
 import useIsMounted from '@/hooks/useIsMounted';
 import GalleryMobile from '../GalleryMobile/GalleryMobile';
 import SwiperCore from 'swiper';
+import ButtonSlide from '../ButtonSlide/ButtonSlide';
 
 const GallerySlider = () => {
   const refSlider = useRef<SwiperCore | null>(null);
   const isMounted = useIsMounted();
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  const { slides } = data;
+  const { slides, button } = data;
 
   const handlePrev = () => {
     if (refSlider.current) {
@@ -83,20 +84,8 @@ const GallerySlider = () => {
             ))}
           </Swiper>
           <div className="flex justify-between bottom-4 absolute z-10 left-[45px] right-[48px] xl:left-[211px] xl:right-[184px]">
-            <button
-              type="button"
-              onClick={handlePrev}
-              className="text-[33px] font-thin leading-normal uppercase hover:underline focus:underline focus:outline-white"
-            >
-              Back
-            </button>
-            <button
-              type="button"
-              onClick={handleNext}
-              className="text-[33px] font-thin leading-normal uppercase hover:underline focus:underline focus:outline-white"
-            >
-              Next
-            </button>
+            <ButtonSlide text={button.back} onClick={handlePrev} />
+            <ButtonSlide text={button.next} onClick={handleNext} />
           </div>
         </div>
       )}
