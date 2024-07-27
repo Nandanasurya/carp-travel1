@@ -98,6 +98,15 @@ input:-webkit-autofill:focus input:-webkit-autofill:active {
   transition: filter 0.3s;
 }
 
+/************GALLERYSLIDE************/
+
+.services-active::before {
+  content: url('/icons/marker.svg');
+  display: flex;
+  margin-right: 8px;
+  height: fit-content;
+}
+
 /************CONTAINER************/
 
 .container {

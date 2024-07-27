@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import BtnMenu from '@/components/ui-kit/BtnMenu/BtnMenu';
 import Logo from '@/components/ui-kit/Logo/Logo';
 import Menu from '@/components/ui-kit/Menu/Menu';
