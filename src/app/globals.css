@@ -147,7 +147,8 @@ img {
   content: url('/icons/marker.svg');
   display: flex;
   margin-right: 8px;
-  height: fit-content;
+  padding-bottom: 10px;
+  /* height: fit-content; */
 }
 
 /************FORM************/
