@@ -25,6 +25,22 @@ export const metadata: Metadata = {
       { url: '/favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
     ],
   },
+  openGraph: {
+    title: 'CarpTravel',
+    description:
+      'We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!',
+    url: 'https://carp-travel-lux.vercel.app',
+    siteName: 'CarpTravel',
+    images: [
+      {
+        url: '/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'CarpTravel Open Graph image',
+      },
+    ],
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
