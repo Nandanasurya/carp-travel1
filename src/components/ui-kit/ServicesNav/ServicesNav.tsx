@@ -22,7 +22,7 @@ const ServicesNav = ({
             type="button"
             onClick={() => handleNavigationClick(index)}
             aria-label={title}
-            className={`flex text-xl text-left font-extralight leading-[17px] uppercase  w-[186px] md:text-[22px] xl:text-[28px] xl:w-[236px] xl:leading-6 hover:opacity-100 hover:ml-2 focus:opacity-100  focus:outline-white ${activeIndex === index ? 'flex font-medium opacity-100' : 'opacity-50'}`}
+            className={`flex text-xl text-left font-extralight leading-[17px] uppercase  w-[186px] md:text-[22px] xl:text-[28px] xl:w-[236px] xl:leading-6 hover:opacity-100 hover:ml-2 focus:opacity-100  focus:outline-white ${activeIndex === index ? 'font-medium opacity-100' : 'opacity-50'}`}
           >
             {title}
           </button>

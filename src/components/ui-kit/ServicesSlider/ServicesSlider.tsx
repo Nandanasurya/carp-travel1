@@ -26,7 +26,7 @@ const ServicesSlider = ({
 
   const handleNavigationClick = (index: number) => {
     if (refSlider.current) {
-      refSlider.current.slideTo(index);
+      refSlider.current.slideTo(index + 5);
       setActiveIndex(index);
       handleActiveIndex(index);
     }
@@ -46,7 +46,7 @@ const ServicesSlider = ({
         crossFade: true,
       }}
       allowTouchMove={false}
-      initialSlide={activeIndex}
+      // initialSlide={activeIndex}
       onSwiper={(swiper) => {
         refSlider.current = swiper;
       }}
