@@ -1,7 +1,8 @@
-import Description from '@/components/base/Description/Description';
-import Section from '@/components/base/Section/Section';
-import Title from '@/components/base/Title/Title';
-import data from '@/data/about.json';
+import { Description } from '@/components/base/Description';
+import { Section } from '@/components/base/Section';
+import { Title } from '@/components/base/Title';
+
+import { dataAbout } from '@/data';
 
 const About = () => {
   const {
@@ -11,7 +12,7 @@ const About = () => {
     description2,
     description3,
     description4,
-  } = data;
+  } = dataAbout;
 
   return (
     <Section id="about">
@@ -27,7 +28,7 @@ const About = () => {
         </div>
       </div>
       <div className="xl:flex xl:flex-row-reverse xl:justify-between">
-        <div className="w-[180px] ml-auto md:ml-0 md:absolute md:left-[32px] md:bottom-[-202px] md:w-[221px] xl:mt-auto xl:w-[296px] xl:relative xl:top-0 xl:bottom-0 xl:left-0">
+        <div className="w-[180px] ml-auto md:ml-0 md:absolute  md:bottom-[-80px] md:w-[221px] xl:mt-auto xl:w-[296px] xl:relative xl:top-0 xl:bottom-0 xl:left-0">
           <p className="text-sm font-normal leading-5 uppercase md:text-base xl:text-lg">
             {description3.text1}
           </p>

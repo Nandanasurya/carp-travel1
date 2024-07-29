@@ -1,12 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import BtnMenu from '@/components/ui-kit/BtnMenu/BtnMenu';
-import Logo from '@/components/ui-kit/Logo/Logo';
-import Menu from '@/components/ui-kit/Menu/Menu';
-import Navigation from '@/components/ui-kit/Navigation/Navigation';
+
 import { useMediaQuery } from 'react-responsive';
-import useIsMounted from '@/hooks/useIsMounted';
+
+import { BtnMenu } from '@/components/ui-kit/BtnMenu';
+import { Logo } from '@/components/ui-kit/Logo';
+import { Menu } from '@/components/ui-kit/Menu';
+import { Navigation } from '@/components/ui-kit/Navigation';
+
+import { useIsMounted } from '@/hooks';
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);

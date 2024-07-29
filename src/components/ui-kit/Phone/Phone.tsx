@@ -1,10 +1,10 @@
-import data from '@/data/contact.json';
+import { dataContact } from '@/data';
 
 const Phone = () => {
-  const { phoneTitle, phone } = data;
+  const { phoneTitle, phone } = dataContact;
 
   return (
-    <div className="flex gap-5 ml-auto md:ml-[30px]">
+    <div className="flex gap-5 w-fit ml-auto md:ml-[30px]">
       <div className="flex flex-col">
         <a
           href={`tel:+${phone.number1.replace(/\s|\(|\)/g, '')}`}

@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Section from '@/components/base/Section/Section';
-import { useScreenWidth } from '@/hooks/useScreenWidth';
-import ServicesSlider from '@/components/ui-kit/ServicesSlider/ServicesSlider';
+
+import { Section } from '@/components/base/Section';
+import { ServicesSlider } from '@/components/ui-kit/ServicesSlider';
+
+import { useScreenWidth } from '@/hooks';
 
 const Services = () => {
   const [active, setActive] = useState(1);

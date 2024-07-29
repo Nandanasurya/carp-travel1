@@ -1,7 +1,7 @@
-import data from '@/data/common.json';
+import { dataCommon } from '@/data';
 
 const FormButton = () => {
-  const { formButton } = data;
+  const { formButton } = dataCommon;
 
   return (
     <button

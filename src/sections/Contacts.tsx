@@ -1,13 +1,14 @@
-import Section from '@/components/base/Section/Section';
-import Title from '@/components/base/Title/Title';
-import ContactForm from '@/components/ui-kit/ContactForm/ContactForm';
-import Email from '@/components/ui-kit/Email/Email';
-import Phone from '@/components/ui-kit/Phone/Phone';
-import Social from '@/components/ui-kit/Social/Social';
-import data from '@/data/contact.json';
+import { Section } from '@/components/base/Section';
+import { Title } from '@/components/base/Title';
+import { ContactForm } from '@/components/ui-kit/ContactForm';
+import { Email } from '@/components/ui-kit/Email';
+import { Phone } from '@/components/ui-kit/Phone';
+import { Social } from '@/components/ui-kit/Social';
+
+import { dataContact } from '@/data';
 
 const Contacts = () => {
-  const { title1, title2 } = data;
+  const { title1, title2 } = dataContact;
 
   return (
     <Section id="contacts">

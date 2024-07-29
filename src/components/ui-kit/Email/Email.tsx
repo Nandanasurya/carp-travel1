@@ -1,7 +1,7 @@
-import data from '@/data/contact.json';
+import { dataContact } from '@/data';
 
 const Email = () => {
-  const { emailTitle, email } = data;
+  const { emailTitle, email } = dataContact;
 
   return (
     <div className="flex gap-5 ml-4 items-center md:ml-0">

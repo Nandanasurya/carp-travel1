@@ -1,10 +1,10 @@
-import Header from '@/layout/Header/Header';
-import About from '@/sections/About';
-import Career from '@/sections/Career';
-import Contacts from '@/sections/Contacts';
-import Gallery from '@/sections/Gallery';
-import Hero from '@/sections/Hero';
-import Services from '@/sections/Services';
+import { Header } from '@/layout/Header';
+import { About } from '@/sections';
+import { Career } from '@/sections';
+import { Contacts } from '@/sections';
+import { Gallery } from '@/sections';
+import { Hero } from '@/sections';
+import { Services } from '@/sections';
 
 export default function Home() {
   return (

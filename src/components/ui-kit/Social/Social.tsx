@@ -1,7 +1,7 @@
-import data from '@/data/contact.json';
+import { dataContact } from '@/data';
 
 const Social = () => {
-  const { socialTitle, social } = data;
+  const { socialTitle, social } = dataContact;
 
   return (
     <div className="flex gap-5 mr-4 ml-auto md:m-0 xl:flex-row-reverse xl:ml-[124px] xl:mr-auto">

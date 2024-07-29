@@ -1,11 +1,14 @@
+import { useRef, useState } from 'react';
+import Image from 'next/image';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade } from 'swiper/modules';
-import data from '@/data/services.json';
-import Title from '@/components/base/Title/Title';
-import { useRef, useState } from 'react';
 import type { Swiper as SwiperType } from 'swiper';
-import Image from 'next/image';
-import ServicesNav from '../ServicesNav/ServicesNav';
+
+import { Title } from '@/components/base/Title';
+import { ServicesNav } from '../ServicesNav';
+
+import { dataServices } from '@/data';
 
 interface IServicesSliderProps {
   handleActiveIndex: (index: number) => void;
@@ -18,7 +21,7 @@ const ServicesSlider = ({
 }: IServicesSliderProps) => {
   const refSlider = useRef<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const { title1, title2, slides } = data;
+  const { title1, title2, slides } = dataServices;
 
   const formatNumber = (number: number) => {
     return String(number).padStart(2, '0');

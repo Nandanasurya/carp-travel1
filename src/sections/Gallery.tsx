@@ -1,12 +1,11 @@
-// 'use client';
+import { Section } from '@/components/base/Section';
+import { Title } from '@/components/base/Title';
+import { GallerySlider } from '@/components/ui-kit/GallerySlider';
 
-import Section from '@/components/base/Section/Section';
-import GallerySlider from '@/components/ui-kit/GallerySlider/GallerySlider';
-import Title from '@/components/base/Title/Title';
-import data from '@/data/gallery.json';
+import { dataGallery } from '@/data';
 
 const Gallery = () => {
-  const { title1, title2 } = data;
+  const { title1, title2 } = dataGallery;
 
   return (
     <Section id="gallery">

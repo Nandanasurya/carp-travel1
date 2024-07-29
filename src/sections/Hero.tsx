@@ -1,9 +1,11 @@
 'use client';
 
-import Description from '@/components/base/Description/Description';
-import Section from '@/components/base/Section/Section';
-import data from '@/data/hero.json';
 import { Link } from 'react-scroll';
+
+import { Description } from '@/components/base/Description';
+import { Section } from '@/components/base/Section';
+
+import { dataHero } from '@/data';
 
 const Hero = () => {
   const {
@@ -16,13 +18,13 @@ const Hero = () => {
     description,
     button,
     to,
-  } = data;
+  } = dataHero;
 
   return (
     <Section id="hero">
       <div className="flex flex-col gap-6 pt-[49px] relative md:pt-[60px] md:flex-row md:gap-0 md:justify-between xl:pt-[26px]">
         <div className="md:flex md:flex-col md:gap-[68px] xl:gap-[148px]">
-          <h1 className="mt-[76px] text-[40px] font-medium leading-[1.4] tracking-[-1.6px] uppercase md:mt-0 md:w-[426px] md:text-[67px] md:leading-normal md:tracking-[-2.68px] xl:w-[646px] xl:text-[98px] xl:leading-[1.2]">
+          <h1 className="mt-[76px] text-[40px] font-medium leading-[1.4] tracking-[-1.6px] uppercase md:mt-0 md:w-[426px] md:text-[67px] md:leading-[1.2] md:tracking-[-2.68px] xl:w-[646px] xl:text-[98px] xl:leading-[1.2]">
             {title1}&#32;<span className="font-thin">{title2}</span>
           </h1>
           <p className="mt-6 text-[10px] font-extralight leading-4 w-[157px] md:mt-0 md:text-sm md:leading-4 md:tracking-[1.26px] md:w-[264px] xl:w-auto xl:text-base">
@@ -31,7 +33,7 @@ const Hero = () => {
         </div>
         <div className="md:w-[230px] xl:w-[294px] xl:flex xl:flex-col xl:justify-between">
           <div className="absolute top-[49px] right-0 md:relative md:top-auto ">
-            <h2 className="text-[37px] font-medium leading-none md:text-[67px] md:leading-normal xl:text-[98px] xl:leading-[1.2]">
+            <h2 className="text-[37px] font-medium leading-none md:text-[67px] md:leading-none xl:text-[98px] xl:leading-[1.2]">
               {subTitle1}&#32;
               <span className="font-thin tracking-[1.665px] md:tracking-[8.71px] xl:tracking-normal">
                 {subTitle2}

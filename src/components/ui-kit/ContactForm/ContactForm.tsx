@@ -1,16 +1,17 @@
 'use client';
 
-import FormField, {
-  FormData,
-  Name,
-} from '@/components/base/FormField/FormField';
-import FormButton from '@/components/base/FormButton/FormButton';
-import data from '@/data/contact.json';
-import schema from '@/helpers/validation';
+import { useEffect } from 'react';
+
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+
+import { FormField, FormData, Name } from '@/components/base/FormField';
+import { FormButton } from '@/components/base/FormButton';
+
+import { schema } from '@/helpers';
+
+import { dataContact } from '@/data';
 
 const ContactForm = () => {
   const {
@@ -24,7 +25,7 @@ const ContactForm = () => {
     mode: 'onTouched',
     resolver: yupResolver(schema),
   });
-  const { formFields, textarea } = data;
+  const { formFields, textarea } = dataContact;
 
   watch((data) => {
     localStorage.setItem('contactForm', JSON.stringify(data));

@@ -1,24 +1,28 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
+
 import { useMediaQuery } from 'react-responsive';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation } from 'swiper/modules';
+import SwiperCore from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
-import Image from 'next/image';
-import data from '@/data/gallery.json';
-import useIsMounted from '@/hooks/useIsMounted';
-import GalleryMobile from '../GalleryMobile/GalleryMobile';
-import SwiperCore from 'swiper';
-import ButtonSlide from '../ButtonSlide/ButtonSlide';
+
+import { GalleryMobile } from '../GalleryMobile';
+import { ButtonSlide } from '../ButtonSlide';
+
+import { useIsMounted } from '@/hooks';
+
+import { dataGallery } from '@/data';
 
 const GallerySlider = () => {
   const refSlider = useRef<SwiperCore | null>(null);
   const isMounted = useIsMounted();
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  const { slides, button } = data;
+  const { slides, button } = dataGallery;
 
   const handlePrev = () => {
     if (refSlider.current) {

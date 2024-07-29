@@ -1,14 +1,15 @@
 'use client';
 
 import { Link } from 'react-scroll';
-import data from '@/data/common.json';
+
+import { dataCommon } from '@/data';
 
 interface INavigationProps {
   onClick?: () => void;
 }
 
 const Navigation = ({ onClick }: INavigationProps) => {
-  const { navigation } = data;
+  const { navigation } = dataCommon;
 
   return (
     <nav className="flex flex-col gap-12 my-auto items-center md:flex-row md:gap-6 xl:gap-14">

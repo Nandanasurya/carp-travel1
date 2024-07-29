@@ -1,16 +1,16 @@
 'use client';
 
-import FormButton from '@/components/base/FormButton/FormButton';
-import FormField, {
-  FormData,
-  Name,
-} from '@/components/base/FormField/FormField';
-import data from '@/data/career.json';
-import schema from '@/helpers/validation';
-import { yupResolver } from '@hookform/resolvers/yup';
 import { useEffect } from 'react';
+
 import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
+import { yupResolver } from '@hookform/resolvers/yup';
+
+import { FormButton } from '@/components/base/FormButton';
+import { FormField, FormData, Name } from '@/components/base/FormField';
+import { schema } from '@/helpers';
+
+import { dataCareer } from '@/data';
 
 const CareerForm = () => {
   const {
@@ -27,7 +27,7 @@ const CareerForm = () => {
       phone: '',
     },
   });
-  const { description2, formFields, textarea, checkbox } = data;
+  const { description2, formFields, textarea, checkbox } = dataCareer;
 
   watch((data) => {
     localStorage.setItem('careerForm', JSON.stringify(data));

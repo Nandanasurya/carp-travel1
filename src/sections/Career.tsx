@@ -1,18 +1,21 @@
 'use client';
 
 import { useMediaQuery } from 'react-responsive';
-import Section from '@/components/base/Section/Section';
-import Title from '@/components/base/Title/Title';
-import data from '@/data/career.json';
-import Advantages from '@/components/ui-kit/Advantages/Advantages';
-import CareerForm from '@/components/ui-kit/CareerForm/CareerForm';
-import useIsMounted from '@/hooks/useIsMounted';
+
+import { Section } from '@/components/base/Section';
+import { Title } from '@/components/base/Title';
+import { Advantages } from '@/components/ui-kit/Advantages';
+import { CareerForm } from '@/components/ui-kit/CareerForm';
+
+import { useIsMounted } from '@/hooks';
+
+import { dataCareer } from '@/data';
 
 const Career = () => {
   const isMounted = useIsMounted();
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
-  const { title1, title2, description1 } = data;
+  const { title1, title2, description1 } = dataCareer;
 
   if (!isMounted) {
     return null;

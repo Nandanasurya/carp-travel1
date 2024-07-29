@@ -1,6 +1,6 @@
-import Modal from '@/components/base/Modal/Modal';
-import BtnMenu from '../BtnMenu/BtnMenu';
-import Navigation from '../Navigation/Navigation';
+import { Modal } from '@/components/base/Modal';
+import { BtnMenu } from '../BtnMenu';
+import { Navigation } from '../Navigation';
 
 interface IMenuProps {
   onClose: () => void;

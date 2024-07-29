@@ -1,6 +1,6 @@
 import { useMediaQuery } from 'react-responsive';
 
-export const useScreenWidth = () => {
+const useScreenWidth = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
@@ -11,3 +11,5 @@ export const useScreenWidth = () => {
     (isDesktop && 'desktop');
   return device;
 };
+
+export default useScreenWidth;

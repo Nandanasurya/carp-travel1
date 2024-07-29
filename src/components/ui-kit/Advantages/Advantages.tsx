@@ -1,7 +1,7 @@
-import data from '@/data/career.json';
+import { dataCareer } from '@/data';
 
 const Advantages = () => {
-  const { subTitle, advantages } = data;
+  const { subTitle, advantages } = dataCareer;
 
   return (
     <div className="w-full md:w-[221px] xl:w-auto xl:ml-10">
