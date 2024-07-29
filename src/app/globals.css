@@ -147,8 +147,19 @@ img {
   content: url('/icons/marker.svg');
   display: flex;
   margin-right: 8px;
-  padding-bottom: 10px;
-  /* height: fit-content; */
+  padding-bottom: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .services-active::before {
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .services-active::before {
+    padding-bottom: 10px;
+  }
 }
 
 /************FORM************/

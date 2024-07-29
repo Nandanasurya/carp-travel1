@@ -25,6 +25,7 @@ export const metadata: Metadata = {
       { url: '/favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
     ],
   },
+  metadataBase: new URL('https://carp-travel-lux.vercel.app'),
   openGraph: {
     title: 'CarpTravel',
     description:
