@@ -16,7 +16,14 @@ export const metadata: Metadata = {
   description:
     'We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!',
   icons: {
-    icon: ['/favicon-dark.ico?v=4'],
+    icon: [
+      { url: '/favicon-light.ico', media: '(prefers-color-scheme: light)' },
+      { url: '/favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
+    ],
+    apple: [
+      { url: '/favicon-light.ico' },
+      { url: '/favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
+    ],
   },
 };
 
@@ -27,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable}`}>
-      <body suppressHydrationWarning={true}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
