@@ -31,12 +31,12 @@
       "name": "email",
       "placeholder": "johnsmith@email.com",
       "autoComplete": "email"
-    },
-    {
-      "label": "Message",
-      "type": "textarea",
-      "id": "message",
-      "name": "message"
     }
-  ]
+  ],
+  "textarea": {
+    "label": "Message",
+    "type": "textarea",
+    "id": "message",
+    "name": "message"
+  }
 }

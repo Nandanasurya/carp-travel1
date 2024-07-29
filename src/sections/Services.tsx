@@ -29,7 +29,7 @@ const Services = () => {
     <Section id="services" classNames="relative">
       <Image
         src={`/images/bg/services/${active}/services-bg-${active}-${device}@1x.webp`}
-        alt="photo"
+        alt="background image services"
         priority
         fill
         quality={100}

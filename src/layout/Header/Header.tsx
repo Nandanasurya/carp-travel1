@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header className="absolute w-full">
-      <div className="flex justify-between max-w-[480px] px-5 py-9 mx-auto">
+      <div className="flex justify-between max-w-[480px] px-5 py-9 mx-auto md:max-w-[704px] md:px-0 md:py-6 xl:max-w-[1232px]">
         <Logo />
         {isMobile ? (
           <>

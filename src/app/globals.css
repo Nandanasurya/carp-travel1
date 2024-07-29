@@ -14,26 +14,37 @@ body {
   color: #fff;
 }
 
-.errors::before {
-  content: url('/icons/error.svg');
-  position: absolute;
-  top: 3px;
-  left: -18px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-input:-webkit-autofill {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff;
-  transition: background-color 1000s ease-in-out 0s;
+/************CONTAINER************/
+
+.container {
+  max-width: 100%;
+  padding: 56px 20px;
+  margin: 0 auto;
 }
 
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus input:-webkit-autofill:active {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff;
-  transition: background-color 1000s ease-in-out 0s;
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 64px 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 104px 24px;
+  }
 }
 
 /************CHECKBOX************/
@@ -86,6 +97,38 @@ input:-webkit-autofill:focus input:-webkit-autofill:active {
   right: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .btn-hero::before {
+    content: url('/icons/frame-left-tablet.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .btn-hero::after {
+    content: url('/icons/frame-right-tablet.svg');
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .btn-hero::before {
+    content: url('/icons/frame-left-desktop.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .btn-hero::after {
+    content: url('/icons/frame-right-desktop.svg');
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
 /************GALLERYSLIDE************/
 
 .swiper-slide:not(.swiper-slide-active) {
@@ -107,37 +150,34 @@ input:-webkit-autofill:focus input:-webkit-autofill:active {
   height: fit-content;
 }
 
-/************CONTAINER************/
+/************FORM************/
 
-.container {
-  max-width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 56px;
-  padding-bottom: 56px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 480px) {
-  .container {
-    max-width: 480px;
-  }
+.errors::before {
+  content: url('/icons/error.svg');
+  position: absolute;
+  top: 3px;
+  left: -18px;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
+  .errors::before {
+    top: -3px;
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-    padding: 24px;
-  }
+input:-webkit-autofill {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 1000s ease-in-out 0s;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill:active {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 1000s ease-in-out 0s;
 }
 
 /************BACKGROUND************/

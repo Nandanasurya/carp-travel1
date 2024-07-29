@@ -8,7 +8,7 @@ const ButtonSlide = ({ onClick, text }: IButtonSlideProps) => {
     <button
       type="button"
       onClick={onClick}
-      className="text-[33px] font-thin leading-normal uppercase hover:underline focus:underline focus:outline-white"
+      className="text-[33px] font-thin leading-normal uppercase xl:leading-none hover:underline focus:underline focus:outline-white"
     >
       {text}
     </button>

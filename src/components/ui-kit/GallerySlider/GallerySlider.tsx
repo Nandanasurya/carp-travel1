@@ -65,12 +65,22 @@ const GallerySlider = () => {
                   stretch: 475,
                 },
               },
+              1280: {
+                coverflowEffect: {
+                  depth: 0,
+                  modifier: 1,
+                  rotate: 0,
+                  scale: 0.5,
+                  slideShadows: false,
+                  stretch: 836,
+                },
+              },
             }}
-            className="mt-[72px]"
+            className="mt-[72px] xl:mt-6"
           >
             {slides.map(({ path, alt }, index) => (
               <SwiperSlide key={index} tag="li">
-                <div className="relative right-[100px] w-[415px] h-[294px]">
+                <div className="relative right-[100px] w-[415px] h-[294px] xl:w-[606px] xl:h-[429px] xl:right-[108px]">
                   <Image
                     src={`/images/slides/gallery/gallery-${path}@1x.webp`}
                     alt={alt}
@@ -83,7 +93,7 @@ const GallerySlider = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="flex justify-between bottom-4 absolute z-10 left-[45px] right-[48px] xl:left-[211px] xl:right-[184px]">
+          <div className="flex justify-between bottom-4 absolute z-10 left-[45px] right-[48px] xl:left-[202px] xl:right-[210px] xl:bottom-0">
             <ButtonSlide text={button.back} onClick={handlePrev} />
             <ButtonSlide text={button.next} onClick={handleNext} />
           </div>

@@ -57,18 +57,18 @@
       "name": "phone",
       "placeholder": "(097) 12 34 567",
       "autoComplete": "tel"
-    },
-    {
-      "label": "Message",
-      "type": "textarea",
-      "id": "message",
-      "name": "message"
-    },
-    {
-      "label": "I confirm my consent to the processing of personal data.",
-      "type": "checkbox",
-      "id": "checked",
-      "name": "checked"
     }
-  ]
+  ],
+  "textarea": {
+    "label": "Message",
+    "type": "textarea",
+    "id": "message",
+    "name": "message"
+  },
+  "checkbox": {
+    "label": "I confirm my consent to the processing of personal data.",
+    "type": "checkbox",
+    "id": "checked",
+    "name": "checked"
+  }
 }

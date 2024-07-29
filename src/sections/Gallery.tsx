@@ -10,7 +10,11 @@ const Gallery = () => {
 
   return (
     <Section id="gallery">
-      <Title title1={title1} title2={title2} />
+      <Title
+        title1={title1}
+        title2={title2}
+        className="md:text-center xl:text-start"
+      />
       <GallerySlider />
     </Section>
   );

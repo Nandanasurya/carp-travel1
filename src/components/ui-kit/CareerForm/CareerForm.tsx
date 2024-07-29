@@ -1,6 +1,5 @@
 'use client';
 
-import Description from '@/components/base/Description/Description';
 import FormButton from '@/components/base/FormButton/FormButton';
 import FormField, {
   FormData,
@@ -24,7 +23,7 @@ const CareerForm = () => {
     mode: 'onTouched',
     resolver: yupResolver(schema),
   });
-  const { description2, formFields } = data;
+  const { description2, formFields, textarea, checkbox } = data;
 
   watch((data) => {
     localStorage.setItem('careerForm', JSON.stringify(data));
@@ -49,26 +48,51 @@ const CareerForm = () => {
   };
 
   return (
-    <div>
-      <Description
-        text={description2.text}
-        className="w-[179px] ml-auto mb-6 whitespace-pre-line"
-      />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {formFields.map((field) => (
+    <div className="md:mt-auto">
+      <p className="text-sm font-extralight leading-5 w-[179px] ml-auto mb-6 whitespace-pre-line md:text-[13px] md:w-[221px] md:mb-10 md:ml-0 xl:w-[234px] xl:text-lg xl:leading-6 xl:mb-[10px]">
+        {description2.text}
+      </p>
+      <form onSubmit={handleSubmit(onSubmit)} className="">
+        <div className="md:flex md:gap-5 xl:gap-6">
+          <div className="md:w-[221px] xl:w-[290px]">
+            {formFields.map((field) => (
+              <FormField
+                key={field.id}
+                label={field.label}
+                type={field.type}
+                id={field.id}
+                name={field.name as Name}
+                errors={errors}
+                register={register}
+                placeholder={field.placeholder}
+                autoComplete={field.autoComplete}
+                className="md:h-[68px] xl:h-[82px]"
+              />
+            ))}
+          </div>
           <FormField
-            key={field.id}
-            label={field.label}
-            type={field.type}
-            id={field.id}
-            name={field.name as Name}
+            key={textarea.id}
+            label={textarea.label}
+            type={textarea.type}
+            id={textarea.id}
+            name={textarea.name as Name}
             errors={errors}
             register={register}
-            placeholder={field.placeholder}
-            autoComplete={field.autoComplete}
+            className="md:w-[221px] md:h-[256px] xl:w-[292px] xl:h-[300px]"
           />
-        ))}
-        <FormButton />
+        </div>
+        <div className="md:flex md:justify-between xl:mt-3">
+          <FormField
+            key={checkbox.id}
+            label={checkbox.label}
+            type={checkbox.type}
+            id={checkbox.id}
+            name={checkbox.name as Name}
+            errors={errors}
+            register={register}
+          />
+          <FormButton />
+        </div>
       </form>
     </div>
   );

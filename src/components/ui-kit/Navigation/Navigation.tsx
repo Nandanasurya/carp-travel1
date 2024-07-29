@@ -11,7 +11,7 @@ const Navigation = ({ onClick }: INavigationProps) => {
   const { navigation } = data;
 
   return (
-    <nav className="flex flex-col gap-12 my-auto items-center md:flex-row md:gap-14">
+    <nav className="flex flex-col gap-12 my-auto items-center md:flex-row md:gap-6 xl:gap-14">
       {navigation.map(({ to, title }) => (
         <Link
           key={to}

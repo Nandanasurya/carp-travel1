@@ -23,7 +23,7 @@ const ContactForm = () => {
     mode: 'onTouched',
     resolver: yupResolver(schema),
   });
-  const { formFields } = data;
+  const { formFields, textarea } = data;
 
   watch((data) => {
     localStorage.setItem('contactForm', JSON.stringify(data));
@@ -46,20 +46,35 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      {formFields.map((field) => (
+    <form onSubmit={handleSubmit(onSubmit)} className="md:flex md:flex-col">
+      <div className="md:flex md:gap-5 md:mb-4 xl:flex-col xl:gap-4 xl:mb-6">
+        <div className="md:w-[221px] xl:flex xl:gap-7 xl:w-auto">
+          {formFields.map((field) => (
+            <FormField
+              key={field.id}
+              label={field.label}
+              type={field.type}
+              id={field.id}
+              name={field.name as Name}
+              errors={errors}
+              register={register}
+              placeholder={field.placeholder}
+              autoComplete={field.autoComplete}
+              className="xl:w-[293px]"
+            />
+          ))}
+        </div>
         <FormField
-          key={field.id}
-          label={field.label}
-          type={field.type}
-          id={field.id}
-          name={field.name as Name}
+          key={textarea.id}
+          label={textarea.label}
+          type={textarea.type}
+          id={textarea.id}
+          name={textarea.name as Name}
           errors={errors}
           register={register}
-          placeholder={field.placeholder}
-          autoComplete={field.autoComplete}
+          className="md:h-[249px] md:w-[463px] xl:h-[202px] xl:w-auto"
         />
-      ))}
+      </div>
       <FormButton />
     </form>
   );
