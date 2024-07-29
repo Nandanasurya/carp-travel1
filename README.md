@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## CarpTravel
 
-## Getting Started
+CarpTravel offers unique and unforgettable journeys through the picturesque Carpathian Mountains, including encompassing sightseeing excursions and top-notch service. The enthusiastic team strives to immerse tourists in the magical atmosphere of the mountains, providing a deep connection with nature and an opportunity to unlock their own potential. Tourists can choose from a variety of outdoor activities proven over time by the experience and expertise of their professional guides.
 
-First, run the development server:
+![CarpTravel](./public/og-image.webp)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   git clone https://github.com/Aleksandr2905/carp-travel.git
+   cd your-repo
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Install the dependencies:
 
-## Learn More
+   npm install
 
-To learn more about Next.js, take a look at the following resources:
+   or
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   yarn install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Running the Application
+   After installing the dependencies, you can run the application locally:
 
-## Deploy on Vercel
+   npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   or
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   yarn dev
+
+   Your application will be available at http://localhost:3000.
+
+## Main Technologies
+
+1. Next.js:
+   Version: 14.2.5
+   A React framework enabling server-side rendering, static site generation, and API routes.
+
+2. React:
+   Version: 18
+   A JavaScript library for building user interfaces, used as the foundation for the project.
+
+3. TypeScript:
+   Version: 5
+   A superset of JavaScript that includes static typing, enhancing code quality and maintainability.
+
+4. Tailwind CSS:
+   Version: 3.4.6
+   A utility-first CSS framework for styling the application, promoting rapid UI development.
+
+5. Form Handling:
+   react-hook-form: Version 7.52.1
+   A library for managing form state and validation in React applications.
+   @hookform/resolvers: Version 3.9.0
+   Provides resolvers for integrating third-party validation libraries like Yup.
+
+6. Validation:
+   Yup: Version 1.4.0
+   A JavaScript schema builder for value parsing and validation used in conjunction with react-hook-form.
+
+7. ESLint and Prettier:
+   eslint: Version 8
+   A linter for identifying and fixing problems in JavaScript code.
+   eslint-config-prettier: Version 9.1.0
+   Disables ESLint rules that conflict with Prettier.
+   prettier: Version 3.3.3
+   A code formatter for keeping code style consistent.
+
+8. Modal and Toast Notifications:
+   react-hot-toast: Version 2.4.1
+   A library for displaying toast notifications in a React application.
+
+9. Responsive Design:
+   react-responsive: Version 10.0.0
+   A library for responsive design that enables components to adapt to different screen sizes.
+
+10. Input Handling:
+    react-input-mask: Version 2.0.4
+    A library for creating input masks for better user input handling.
+
+11. Scrolling Effects:
+    react-scroll: Version 1.9.0
+    A library for smooth scrolling in single-page applications.
+
+12. Swiper:
+    Version: 11.1.7
+    A powerful library for creating modern, touch-friendly sliders.
+
+## Summary
+
+These technologies combined provide a solid foundation for building a modern web application, incorporating best practices for performance, scalability, and maintainability.
+
+![Summary](./public/lighthouse.webp)

@@ -12,12 +12,6 @@ const ServicesNav = ({
   return (
     <div className="flex flex-col gap-4 mt-6 mb-6 md:mt-0 xl:gap-6">
       {slides.map(({ title }, index) => (
-        // <li
-        //   key={index}
-        //   className={`flex items-center
-        //   ${activeIndex === index && 'services-active'}
-        // `}
-        // >
         <button
           key={index}
           type="button"
@@ -27,7 +21,6 @@ const ServicesNav = ({
         >
           {title}
         </button>
-        // </li>
       ))}
     </div>
   );
