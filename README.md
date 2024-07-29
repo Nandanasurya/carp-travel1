@@ -10,27 +10,36 @@ CarpTravel offers unique and unforgettable journeys through the picturesque Carp
 
    ```bash
    git clone https://github.com/Aleksandr2905/carp-travel.git
-   cd your-repo
+
+   cd carp-travel
    ```
 
 2. Install the dependencies:
 
+   ```bash
    npm install
+   ```
 
    or
 
+   ```bash
    yarn install
+   ```
 
 3. Running the Application
    After installing the dependencies, you can run the application locally:
 
+   ```bash
    npm run dev
+   ```
 
    or
 
+   ```bash
    yarn dev
+   ```
 
-   Your application will be available at http://localhost:3000.
+Your application will be available at http://localhost:3000.
 
 ## Main Technologies
 
@@ -93,3 +102,11 @@ CarpTravel offers unique and unforgettable journeys through the picturesque Carp
 These technologies combined provide a solid foundation for building a modern web application, incorporating best practices for performance, scalability, and maintainability.
 
 ![Summary](./public/lighthouse.webp)
+
+```
+
+```
+
+```
+
+```
