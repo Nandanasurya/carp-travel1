@@ -10,7 +10,7 @@ const ServicesNav = ({
   activeIndex,
 }: IServicesNavProps) => {
   return (
-    <ul className="flex flex-col gap-4 mt-6 mb-6 md:mt-0 xl:gap-6">
+    <div className="flex flex-col gap-4 mt-6 mb-6 md:mt-0 xl:gap-6">
       {slides.map(({ title }, index) => (
         // <li
         //   key={index}
@@ -29,7 +29,7 @@ const ServicesNav = ({
         </button>
         // </li>
       ))}
-    </ul>
+    </div>
   );
 };
 
