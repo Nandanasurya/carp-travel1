@@ -102,11 +102,3 @@ Your application will be available at http://localhost:3000.
 These technologies combined provide a solid foundation for building a modern web application, incorporating best practices for performance, scalability, and maintainability.
 
 ![Summary](./public/lighthouse.webp)
-
-```
-
-```
-
-```
-
-```
