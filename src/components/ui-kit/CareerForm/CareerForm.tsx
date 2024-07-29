@@ -10,6 +10,7 @@ import schema from '@/helpers/validation';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import toast, { Toaster } from 'react-hot-toast';
 
 const CareerForm = () => {
   const {
@@ -22,6 +23,9 @@ const CareerForm = () => {
   } = useForm<FormData>({
     mode: 'onTouched',
     resolver: yupResolver(schema),
+    defaultValues: {
+      phone: '',
+    },
   });
   const { description2, formFields, textarea, checkbox } = data;
 
@@ -42,13 +46,19 @@ const CareerForm = () => {
   }, [setValue]);
 
   const onSubmit = (data: FormData) => {
-    console.log(data);
-    localStorage.removeItem('careerForm');
-    reset();
+    try {
+      console.log(data);
+      toast.success('Your data has been successfully sent!');
+      localStorage.removeItem('careerForm');
+      reset();
+    } catch (error) {
+      toast.error('Something went wrong, try again.');
+    }
   };
 
   return (
     <div className="md:mt-auto">
+      <Toaster />
       <p className="text-sm font-extralight leading-5 w-[179px] ml-auto mb-6 whitespace-pre-line md:text-[13px] md:w-[221px] md:mb-10 md:ml-0 xl:w-[234px] xl:text-lg xl:leading-6 xl:mb-[10px]">
         {description2.text}
       </p>
