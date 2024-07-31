@@ -7,14 +7,18 @@ const Logo = () => {
   const { src, alt } = dataCommon.logo;
 
   return (
-    <Link href="/" aria-label={alt}>
+    <Link
+      href="/"
+      aria-label={alt}
+      className="hover:scale-110 focus:outline-white"
+    >
       <Image
         src={src}
         alt={alt}
         width={61}
         height={34}
         priority
-        className="h-[34px] w-[61px]"
+        className="h-[34px] w-[61px] "
       />
     </Link>
   );

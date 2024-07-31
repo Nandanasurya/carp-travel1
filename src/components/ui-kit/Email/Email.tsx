@@ -4,7 +4,7 @@ const Email = () => {
   const { emailTitle, email } = dataContact;
 
   return (
-    <div className="flex gap-5 ml-4 items-center md:ml-0">
+    <div className="flex gap-5 ml-auto mr-[46px] items-center md:m-0">
       <a
         href={`mailto:${email}`}
         aria-label={`send email${email}`}

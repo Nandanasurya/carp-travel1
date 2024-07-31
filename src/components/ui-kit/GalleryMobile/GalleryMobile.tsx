@@ -14,7 +14,7 @@ const GalleryMobile = ({ slides }: IGalleryMobileProps) => {
             alt={alt}
             width={606}
             height={429}
-            priority
+            // priority
           />
         </li>
       ))}

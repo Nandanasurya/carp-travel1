@@ -23,9 +23,9 @@ const CareerForm = () => {
   } = useForm<FormData>({
     mode: 'onTouched',
     resolver: yupResolver(schema),
-    defaultValues: {
-      phone: '',
-    },
+    // defaultValues: {
+    //   phone: '',
+    // },
   });
   const { description2, formFields, textarea, checkbox } = dataCareer;
 
@@ -51,6 +51,7 @@ const CareerForm = () => {
       toast.success('Your data has been successfully sent!');
       localStorage.removeItem('careerForm');
       reset();
+      setValue('phone', '');
     } catch (error) {
       toast.error('Something went wrong, try again.');
     }
