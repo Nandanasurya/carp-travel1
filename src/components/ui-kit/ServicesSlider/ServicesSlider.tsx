@@ -71,7 +71,6 @@ const ServicesSlider = ({
               alt={slides[activeIndex]?.subTitle}
               width={280}
               height={213}
-              // priority
               className="h-full w-full md:w-[463px] md:h-[370px] xl:w-[607px] xl:h-[429px]"
             />
             <div className="flex flex-col h-[368px] mt-3 md:mt-0  md:w-[221px] md:h-[370px] xl:w-full xl:h-auto">

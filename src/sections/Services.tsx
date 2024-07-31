@@ -32,7 +32,6 @@ const Services = () => {
       <Image
         src={`/images/bg/services/${active}/services-bg-${active}-${device}@1x.webp`}
         alt="background image services"
-        // priority
         fill
         quality={100}
         sizes="100vw"
