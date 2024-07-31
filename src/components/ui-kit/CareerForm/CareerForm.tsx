@@ -7,7 +7,13 @@ import toast, { Toaster } from 'react-hot-toast';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import { FormButton } from '@/components/base/FormButton';
-import { FormField, FormData, Name } from '@/components/base/FormField';
+import {
+  Input,
+  FormData,
+  Name,
+  Textarea,
+  Checkbox,
+} from '@/components/base/FormField';
 import { schema } from '@/helpers';
 
 import { dataCareer } from '@/data';
@@ -23,9 +29,6 @@ const CareerForm = () => {
   } = useForm<FormData>({
     mode: 'onTouched',
     resolver: yupResolver(schema),
-    // defaultValues: {
-    //   phone: '',
-    // },
   });
   const { description2, formFields, textarea, checkbox } = dataCareer;
 
@@ -67,7 +70,7 @@ const CareerForm = () => {
         <div className="md:flex md:gap-5 xl:gap-6">
           <div className="md:w-[221px] xl:w-[290px]">
             {formFields.map((field) => (
-              <FormField
+              <Input
                 key={field.id}
                 label={field.label}
                 type={field.type}
@@ -81,7 +84,7 @@ const CareerForm = () => {
               />
             ))}
           </div>
-          <FormField
+          <Textarea
             key={textarea.id}
             label={textarea.label}
             type={textarea.type}
@@ -93,7 +96,7 @@ const CareerForm = () => {
           />
         </div>
         <div className="md:flex md:justify-between xl:mt-3">
-          <FormField
+          <Checkbox
             key={checkbox.id}
             label={checkbox.label}
             type={checkbox.type}

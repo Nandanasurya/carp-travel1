@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import toast, { Toaster } from 'react-hot-toast';
 
-import { FormField, FormData, Name } from '@/components/base/FormField';
+import { Input, FormData, Name, Textarea } from '@/components/base/FormField';
 import { FormButton } from '@/components/base/FormButton';
 
 import { schema } from '@/helpers';
@@ -59,7 +59,7 @@ const ContactForm = () => {
         <div className="md:flex md:gap-5 md:mb-4 xl:flex-col xl:gap-4 xl:mb-6">
           <div className="md:w-[221px] xl:flex xl:gap-7 xl:w-auto">
             {formFields.map((field) => (
-              <FormField
+              <Input
                 key={field.id}
                 label={field.label}
                 type={field.type}
@@ -73,7 +73,7 @@ const ContactForm = () => {
               />
             ))}
           </div>
-          <FormField
+          <Textarea
             key={textarea.id}
             label={textarea.label}
             type={textarea.type}
