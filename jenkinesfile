@@ -1,0 +1,102 @@
+pipeline {
+    agent any
+    
+    environment {
+        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials'
+        DOCKER_REGISTRY = 'docker.io'
+        DOCKER_IMAGE_NAME = 'nodejs-app'
+        DOCKER_IMAGE_TAG = 'latest'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/yourusername/your-nodejs-app-repo.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    // Build Docker image
+                    sh 'docker build -t ${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG} .'
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                script {
+                    // Run tests
+                    sh 'npm test'
+                }
+            }
+        }
+
+        stage('Push to Docker Hub') {
+            steps {
+                script {
+                    // Login to Docker Hub
+                    withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS_ID, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                        sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
+                    }
+                    // Push the image to Docker Hub
+                    sh 'docker push ${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}'
+                }
+            }
+        }
+
+        stage('Deploy to Minikube') {
+            steps {
+                script {
+                    // Start Minikube
+                    sh 'minikube start'
+
+                    // Set up kubectl to use Minikube
+                    sh 'alias kubectl="minikube kubectl --"'
+                    
+                    // Apply Kubernetes manifests
+                    sh 'kubectl apply -f k8s/deployment.yaml'
+                    sh 'kubectl apply -f k8s/service.yaml'
+                }
+            }
+        }
+
+        stage('Rolling Update') {
+            steps {
+                script {
+                    // Perform rolling update in Kubernetes
+                    sh 'kubectl rollout restart deployment/nodejs-app'
+                }
+            }
+        }
+
+        stage('Canary Deployment') {
+            steps {
+                script {
+                    // Implement canary deployment using two deployments (one for canary and one for stable)
+                    // Assuming the canary is defined in a separate manifest, for example:
+                    // sh 'kubectl apply -f k8s/canary-deployment.yaml'
+                    
+                    // Apply the canary update (this assumes you have a canary deployment YAML)
+                    sh 'kubectl apply -f k8s/canary-deployment.yaml'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            // Cleanup actions
+            sh 'docker logout'
+        }
+
+        success {
+            echo 'Deployment to Minikube successful!'
+        }
+
+        failure {
+            echo 'Deployment failed!'
+        }
+    }
+}
