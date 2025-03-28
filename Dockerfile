@@ -1,7 +1,5 @@
-# Use a specific node version and make sure npm is up-to-date
-FROM node:18-alpine
+FROM node:20-alpine
 
-# Set working directory inside the container
 WORKDIR /app
 
 # Copy package.json and package-lock.json to leverage Docker cache effectively
@@ -15,9 +13,6 @@ RUN npx update-browserslist-db@latest
 
 # Add debug info (node version, npm version, and memory usage)
 RUN node -v && npm -v && free -h  # Debugging memory status
-
-# Optional: Upgrade npm to latest
-RUN npm install -g npm@latest
 
 # Increase Node.js memory limit
 RUN NODE_OPTIONS="--max-old-space-size=8192" npm run build --verbose
