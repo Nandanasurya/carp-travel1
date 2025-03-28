@@ -13,14 +13,14 @@ RUN npm install
 # Fix Browserslist issue
 RUN npx update-browserslist-db@latest
 
-# Copy the rest of the app files
-COPY . .
+# Add debug info (node version, npm version, and memory usage)
+RUN node -v && npm -v && free -h  # Debugging memory status
 
-# Optional: Add debug info (can help identify the issue with memory or versions)
-RUN node -v && npm -v && free -h  # This will show Node.js version, npm version, and memory status
+# Optional: Upgrade npm to latest
+RUN npm install -g npm@latest
 
-# Increase Node.js memory limit if needed
-RUN NODE_OPTIONS="--max-old-space-size=4096" npm run build
+# Increase Node.js memory limit
+RUN NODE_OPTIONS="--max-old-space-size=8192" npm run build --verbose
 
 # Expose port 3000
 EXPOSE 3000
